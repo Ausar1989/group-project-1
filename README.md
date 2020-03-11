@@ -1,3 +1,4 @@
+
 ## project-1 -- 
 Pulling information about the song you're listening to while you're listening to it. Getting lyrics for a song you're listening to. Display upcoming events related to the artist playing. Display suggested music.
 
