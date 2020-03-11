@@ -6,7 +6,7 @@ Pulling information about the song you're listening to while you're listening to
 This is an image of the homepage:
 ![Homepage](assets/images/Lyric1.png)
 
-This is an image of the music video and lyrics the user inputed thatwas retrieved from the API:
+This is an image of the music video and lyrics the user inputed that was retrieved from the API:
 ![MusicAndLyrics](assets/images/Lyric3.png)
 
 This is an image of Recommened the artist searches:
