@@ -1,5 +1,5 @@
 
-## project-1 -- 
+## Project-1 -- 
 Pulling information about the song you're listening to while you're listening to it. Getting lyrics for a song you're listening to. Display upcoming events related to the artist playing. Display suggested music.
 
 ## Example of Website feartures
@@ -26,6 +26,15 @@ TasteDive
 5. Build logic to display event information
 6. Troubleshoot 
 
+## Technology Used
+* HTML
+* CSS
+* Javascript
+* jQuery
+* Materialize
+* Genius API
+* YouTube API
+* TasteDive API
 
 
 
