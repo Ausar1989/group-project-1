@@ -1,6 +1,6 @@
 
-## Project-1 -- 
-Pulling information about the song you're listening to while you're listening to it. Getting lyrics for a song you're listening to. Display upcoming events related to the artist playing. Display suggested music.
+## Lyrical Connection
+Pulling information about the song you're listening to while you're listening to it. Getting lyrics for a song you're listening to. Display upcoming events related to the artist playing. Display suggested music. Click [here](https://ausar1989.github.io/group-project-1/) to navigate the website.
 
 ## Example of Website feartures
 This is an image of the homepage:
