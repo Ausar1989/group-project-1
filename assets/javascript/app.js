@@ -10,6 +10,8 @@ $(document).ready(function () {
         recentSearches = [];
     }
 
+    
+
 
     function renderButton() {
         $("#recent").empty();
@@ -33,10 +35,11 @@ $(document).ready(function () {
         lyricsQuery(songName);
     }
 
-    $("#recent").on("click", ".recentSong", function (event) {
+    $("#recent").on("click", ".recentSong", function (event, handler,) {
         isClickingRecentSearch = true
-        console.log(event.target.getAttribute("data-name"));
+        document.addEventListener('touchstart', handler, {passive: true});
         var songName = event.target.getAttribute("data-name")
+        console.log(event.target.getAttribute("data-name"));
         searchMusic(songName)
     })
 
@@ -52,13 +55,15 @@ $(document).ready(function () {
 
     function youtubeQuery(songName) {
         var youTubeURL =
-            "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=vevo%20" + songName + "&VideoEmbedded=true&key=AIzaSyCmvB469uoUoyfG_1PjZ76qRlNh1N9-uMM";
+            "https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q=vevo%20" + songName + "&VideoEmbedded=true&key=AIzaSyAQjTeJ334dyV3qKIRPn80zxhw1e4gM2Ww";
 
 // AIzaSyBrUzOmwgzmZPFQ6rfWBY8-SyUp1C9LZ8Y
 //AIzaSyDCr1e5nD_Tz9RErqA61M6TPv_lEKiTw4
+//new api Key for YouTube AIzaSyAQjTeJ334dyV3qKIRPn80zxhw1e4gM2Ww
+//changed the url to my own url because heroku wouldn't allow me to use their's.
 
         $.ajax({
-            url: "https://cors-anywhere.herokuapp.com/" + youTubeURL
+            url: "https://protected-reaches-15262.herokuapp.com/" + youTubeURL
         }).then(function (response) {
             var videoID = response.items[0].id.videoId;
             $(".video-container").html(
@@ -68,6 +73,7 @@ $(document).ready(function () {
             );
 
         });
+        
     }
 
     function lyricsQuery(songName) {
@@ -83,7 +89,7 @@ $(document).ready(function () {
             var artist = response.response.hits[0].result.primary_artist.name;
             tasteQuery(artist);
             $.ajax({
-                url: "https://cors-anywhere.herokuapp.com/" + lyricsURL,
+                url: "https://protected-reaches-15262.herokuapp.com/" + lyricsURL,
                 method: "GET"
             }).then(function (response) {
                 var songLyricsLinesList = $(response)
@@ -101,7 +107,7 @@ $(document).ready(function () {
         });
         function tasteQuery(artist) {
             var tasteDiveURL =
-                "https://cors-anywhere.herokuapp.com/" + "https://tastedive.com/api/similar?q=" + artist + "&type=band&limit=5&k=341252-project1-GORKXH3A";
+                "https://protected-reaches-15262.herokuapp.com/" + "https://tastedive.com/api/similar?q=" + artist + "&type=band&limit=5&k=341252-project1-GORKXH3A";
 
             $.ajax({
                 url: tasteDiveURL,
